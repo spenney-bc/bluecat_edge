@@ -1,0 +1,4 @@
+host: https://api-demo.pilot.bluec.at
+clientId: 2a9cd457-ad3e-4449-a871-62e92859ab31
+clientSecret: 07267133-9b31-4c0d-8b21-ba21fc8292bf
+outdir: .
