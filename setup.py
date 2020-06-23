@@ -15,7 +15,7 @@ setup(
         "requests>=2.23.0",
         "PyYAML>=5.3.1",
         "pytest",
-        "dataclasses_json>=0.5.1",
+        "dataclasses-json>=0.5.1",
         "marshmallow>=3.6.1",
         "marshmallow-enum>=1.5.1",
         "mypy-extensions>=0.4.3",
