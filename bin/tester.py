@@ -61,6 +61,7 @@ def main():
     query_list = bluecat_edge.get_queries(batchSize=10, order="ASC", policyAction="Block")
     print(query_list)
 
+    print(bluecat_edge.count_queries('SMP-Lab'))
 
 if __name__ == "__main__":
     main()

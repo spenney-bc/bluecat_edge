@@ -24,7 +24,7 @@ GET_POLICY = '{}/v5/api/policies'.format(host)
 LIST_DLS = '{}/v1/api/list/dns'.format(host)
 GET_QUERY_LOGS = '{}/v3/api/dnsQueryLogs?{{}}'.format(host)
 GET_AUDIT_LOGS = '{}/v1/api/audit/logs?{{}}'.format(host)
-
+COUNT_QUERIES = '{}/v1/api/customer/dnsQueryLog/count?siteName={{}}'.format(host)
 
 def refresh_token():
     try:
@@ -110,3 +110,10 @@ def get_queries(**query_items):
                             headers=headers).text
     query_info = classes.Query.schema().loads(response, many=True)
     return query_info
+
+
+def count_queries(site):
+    headers = dict(Authorization=refresh_token())
+    query_count = requests.get(COUNT_QUERIES.format(site),
+                               headers=headers).json()
+    return query_count['count']
